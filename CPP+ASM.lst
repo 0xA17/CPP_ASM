@@ -1,0 +1,57 @@
+Microsoft (R) Macro Assembler Version 14.32.31335.0	    04/14/23 09:11:01
+asm.asm							     Page 1 - 1
+
+
+				.386
+				.MODEL FLAT
+ 00000000			.CODE
+
+ 00000000			_CheckValueASM proc
+ 00000000  8B 44 24 04			MOV eax, [ESP+4]
+ 00000004  8B 5C 24 08			MOV ebx, [ESP+8]
+ 00000008  33 D2			XOR edx, edx
+ 0000000A  F7 FB			IDIV ebx
+
+ 0000000C  8B C2			MOV eax, edx
+ 0000000E  C3				RETN
+ 0000000F			_CheckValueASM endp
+
+				END
+Microsoft (R) Macro Assembler Version 14.32.31335.0	    04/14/23 09:11:01
+asm.asm							     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000000F DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+_CheckValueASM . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000000F Public
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000000h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors
